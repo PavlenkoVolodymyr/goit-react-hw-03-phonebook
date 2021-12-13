@@ -1,11 +1,11 @@
-import PropTypes from "prop-types";
-import s from "./Contacts.module.css";
-import ContactItem from "../ContactItem/ContactItem";
+import PropTypes from 'prop-types';
+import s from './Contacts.module.css';
+import ContactItem from '../ContactItem/ContactItem';
 
 function Contacts({ listContacts = [], onDelete }) {
   return (
     <ul className={s.list}>
-      {listContacts.map((el) => (
+      {listContacts.map(el => (
         <li className={s.item} key={el.id}>
           <ContactItem
             id={el.id}
@@ -25,7 +25,7 @@ Contacts.propTypes = {
       id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       number: PropTypes.string.isRequired,
-    })
+    }),
   ),
   onDelete: PropTypes.func.isRequired,
 };
